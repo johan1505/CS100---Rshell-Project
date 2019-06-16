@@ -1,0 +1,21 @@
+echo
+echo "---exited; rshell has been rerun for test2---"
+echo
+echo
+echo
+echo ********************* TEST2 *********************
+echo //testing cases where exit should not be executed due to connector logic
+echo #note: the echo; at the start of every command is for output organization
+echo "*****Test a: echo 10 || exit && echo 20; echo 30 *****"
+echo; echo 10 || exit && echo 20; echo 30
+echo
+echo "*****Test b: echo 10 || exit && echo 20; echo 30 *****"
+echo; echo 10 || exit && echo 20; echo 30
+echo
+echo "*****Test c: echo 10; echo 20 || ech 30 || exit *****"
+echo; echo 10; echo 20 || ech 30 || exit
+echo
+echo //testing case where exit should be executed due to connector logic
+echo
+echo "*****Test d: echo 10; echo 20 && eh 30 || ech 40 || exit *****"
+echo; echo 10; echo 20 && eh 30 || ech 40 || exit

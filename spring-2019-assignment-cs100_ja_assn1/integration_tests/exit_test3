@@ -1,0 +1,14 @@
+echo
+echo "---exited; rshell has been rerun for test3---"
+echo
+echo
+echo
+echo ********************* TEST3 *********************
+echo //testing case when exit is not the first executable inputted
+echo #note: the echo; at the start of every command is for output organization
+echo "***** Test a: echo exit doesnt work here. see? *****"
+echo; echo exit doesnt work here. see?
+echo
+echo //testing case when exit is first with more arguments after
+echo "***** Test b: exit ls -a git status will this work? *****"
+echo; exit ls -a git status will this work?

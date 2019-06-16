@@ -1,0 +1,38 @@
+echo ************************************
+echo ******INPUT REDIRECTION TEST********
+echo ************************************
+echo //note: every tested input will be followed by the result in the next line
+echo #note: the echo; at the start of every command is for output organization
+echo
+echo "****************************** TEST 1: cat < inputReFile  ******************************"
+echo; cat < inputReFile
+echo
+echo "****************************** TEST 2: echo lmao && cat < inputReFile || echo lol ******************************"
+echo; echo lmao && cat < inputReFile || echo lol
+echo
+echo "****************************** TEST 3: ec lol || cat < inputReFile && ls ******************************"
+echo; ec lol || cat < inputReFile && ls
+echo
+echo "****************************** TEST 4: wc < inputReFile && cat < inputReFile ******************************"
+echo; wc < inputReFile && cat < inputReFile
+echo
+echo "****************************** TEST 5: echo 10; echo 20; cat < inputReFile; echo 30 && echo 40 || echo 50 || echo 60; echo 70 && echo 80 && echo 90 || echo 100 ******************************"
+echo; echo 10; echo 20; cat < inputReFile; echo 30 && echo 40 || echo 50 || echo 60; echo 70 && echo 80 && echo 90 || echo 100
+echo
+echo *** varied command types tests***
+echo "****************************** TEST 6: git status && eco world || wc < inputReFile ******************************"
+echo; git status && eco world || wc < inputReFile
+echo
+echo "****************************** TEST 7: git status; cat < inputReFile || cat < inputReFile ******************************"
+echo; git status; cat < inputReFile || cat < inputReFile 
+echo
+echo "****************************** TEST 8: (echo lol && echo bye) || (cat < inputReFile && wc < inputReFile) ******************************"
+echo; (echo lol && echo bye) || (cat < inputReFile && wc < inputReFile)
+echo
+echo "****************************** TEST 9: (wc && cat) < inputReFile ******************************"
+echo; (wc && cat) < inputReFile
+echo
+echo "****************************** TEST 10: (cat && cat || wc && wc; cat) < inputReFile  ******************************"
+echo; (cat && cat || wc && wc; cat) < inputReFile 
+echo
+exit

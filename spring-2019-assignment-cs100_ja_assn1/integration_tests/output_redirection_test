@@ -1,0 +1,38 @@
+echo ************************************
+echo ******OUTPUT REDIRECTION TEST*******
+echo ************************************
+echo //note: every tested input will be followed by the result in the next line
+echo #note: the echo; at the start of every command is for output organization
+echo
+echo "****************************** TEST 1: echo hello > newFile; cat < newFile ******************************"
+echo; echo hello > newFile && cat < newFile
+echo
+echo "****************************** TEST 2: echo lmao && ls > newFile || echo lol; cat < newFile ******************************"
+echo; echo lmao && ls > newFile || echo lol; cat < newFile
+echo
+echo "****************************** TEST 3: ec lol || echo 1 > newFile && ls; cat < newFile ******************************"
+echo; ec lol || echo 1 > newFile && ls; cat < newFile
+echo
+echo "****************************** TEST 4: echo 2 >> newFile &&  echo 3 >> newFile; cat < newFile ******************************"
+echo; echo 2 >> newFile &&  echo 3 >> newFile; cat < newFile
+echo
+echo "****************************** TEST 5: echo 10; echo 20; echo 25 >> newFile; echo 30 && echo 40 || echo 50 || echo 60; echo 70 && echo 80 && echo 90 || echo 100; cat < newFile ******************************"
+echo; echo 10; echo 20; echo 25 >> newFile; echo 30 && echo 40 || echo 50 || echo 60; echo 70 && echo 80 && echo 90 || echo 100; cat < newFile
+echo
+echo *** varied command types tests***
+echo "****************************** TEST 6: (git status && eco world) || echo 40 >> newFile; cat < newFile ******************************"
+echo; (git status && eco world) || echo 40 >> newFile; cat < newFile
+echo
+echo "****************************** TEST 7: (echo 40 && echo lmao) >> newFile; cat < newFile ******************************"
+echo; (echo 40 && echo lmao) >> newFile; cat < newFile
+echo
+echo "****************************** TEST 8: ((echo lol && echo bye) && (echo world >> newFile); cat < newFile) ******************************"
+echo; ((echo lol && echo bye) && (echo world >> newFile); cat < newFile)
+echo
+echo "****************************** TEST 9: (whoami > newFile) || (whoami > newFile) && (whoami > newFile); cat < newFile ******************************"
+echo; (whoami > newFile) || (whoami > newFile) && (whoami > newFile); cat < newFile
+echo
+echo "****************************** TEST 10: echo lmaooo && (echo nice >> newFile) && echo 123 > newFile; cat < newFile  ******************************"
+echo; echo lmaooo && (echo nice >> newFile) && echo 123 > newFile; cat < newFile
+echo
+exit

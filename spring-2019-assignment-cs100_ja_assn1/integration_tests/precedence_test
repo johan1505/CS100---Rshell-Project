@@ -1,0 +1,40 @@
+echo ************************************
+echo *********PRECEDENCE TEST************
+echo ************************************
+echo //note: every tested input will be followed by the result in the next line
+echo #note: the echo; at the start of every command is for output organization
+echo ***connector logic focused tests***
+echo "****************************** TEST 1: echo 10 || (eco 20 || echo 30) ******************************"
+echo; echo 10 || (eco 20 || echo 30)
+echo
+echo "****************************** TEST 2: (echo 10 && echo 20) || (echo 30 && echo 40) ******************************"
+echo; (echo 10 && echo 20) || (echo 30 && echo 40)
+echo
+echo "****************************** TEST 3: ((echo 10; echo 20) || (echo 30)) ******************************"
+echo; ((echo 10; echo 20) || (echo 30))
+echo
+echo "****************************** TEST 4: (echo 10 && echo 20; echo 30) || (echo 40 && echo 50) ******************************"
+echo; (echo 10 && echo 20; echo 30) || (echo 40 && echo 50)
+echo
+echo "****************************** TEST 5: (echo 10; echo 20) || (echo 30 && echo 40) || echo 50 || (echo 60; echo 70 && echo 80 && echo 90) || echo 100 ******************************"
+echo; (echo 10; echo 20) || (echo 30 && echo 40) || echo 50 || (echo 60; echo 70 && echo 80 && echo 90) || echo 100
+echo
+echo ***connector with varied command types tests***
+echo "****************************** TEST 6: git status && (echo world || ls) ******************************"
+echo; git status && (echo world || ls)
+echo
+echo "****************************** TEST 7: (ls -a && mkdir testDir) || echo hello ******************************"
+echo; (ls -a && mkdir testDir) || echo hello
+echo
+echo "****************************** TEST 8: (ls -a; rm -rf testDir && ls -a) || echo did it delete? ******************************"
+echo; (ls -a; rm -rf testDir && ls -a) || echo did it delete?
+echo
+echo ***testing with some wrong inputs***
+echo
+echo "****************************** TEST 9: ((((((l -a; echo hello && git lmao)))))) ******************************"
+echo; ((((((l -a; echo hello && git lmao))))))
+echo
+echo "****************************** TEST 10: (ech lil && git status) || (ls -a; echo what; git git; rmove folder) ******************************"
+echo; (ech lil && git status) || (ls -a; echo what; git git; rmove folder)
+echo
+exit

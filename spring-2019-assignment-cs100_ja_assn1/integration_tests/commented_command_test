@@ -1,0 +1,39 @@
+echo ********COMMENTED            COMMAND TEST         BEGINS         NOW********
+echo
+echo Input: "#"
+#
+echo
+echo Input: "#1-512i520-5i235-0235i135351-02u350i153i=-13=i5-230512="
+#1-512i520-5i235-0235i135351-02u350i153i=-13=i5-230512=
+echo
+echo Command: "#exit"
+#exit
+echo
+echo Command: "git status#GARBAGEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE#####GARBAGEEEEEEEEEEEEEEEE"
+git status#GARBAGEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE#####GARBAGEEEEEEEEEEEEEEEE
+echo
+echo Command: "echo hello#GARBAGE GARBAGE GARBAGE GARBAGE GARBAGE GARBAGE"
+echo hello#GARBAGE GARBAGE GARBAGE GARBAGE GARBAGE GARBAGE
+echo
+echo Command: "ls #-l"
+ls #-l
+echo
+echo Command: "ls#-a"
+ls#-a
+echo
+echo Command: "mkdir test1 && echo "second output" #echo no third output && mkdir test2"
+mkdir test1 && echo "second output" #echo no third output && mkdir test2
+echo
+echo Command: "ls#STUFF THAT WILL BE IGNORED"
+ls#STUFF THAT WILL BE IGNORED
+echo
+echo Commad: "touch test2.cpp || ls && echo second output; echo third output#####################################################################"
+touch test2.cpp || ls && echo second output; echo third output#####################################################################
+echo
+ls
+echo command: "rm -rf "test1" "test2.cpp" # git status && exit"
+rm -rf "test1" "test2.cpp"#git status && exit
+echo
+ls
+echo ********COMMENTED COMMAND TEST ENDS NOW********
+exit

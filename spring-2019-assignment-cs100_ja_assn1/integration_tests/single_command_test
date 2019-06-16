@@ -1,0 +1,54 @@
+echo
+echo Hello world
+echo ********SINGLE            COMMAND TEST         BEGINS         NOW********
+echo
+ls
+echo
+ls -a
+echo
+echo "Next       command    will create directory        called test1"
+mkdir test1
+echo Folder    test1   should    have   been     sucessfuly            created
+echo "Running ls to see the new directory"
+ls
+echo
+echo Showing "hidden directories"
+ls -a
+echo
+echo Creating a test2.cpp file
+touch test2.cpp
+echo
+ls
+echo
+echo "Moving test2.cpp file into test directory"
+mv test2.cpp test1
+echo
+echo "test2.cpp is not longer visible here"
+echo
+ls
+echo
+echo "Deleting the foder created recursively"
+rm -rf test1
+echo
+echo "Folder deleted"
+ls
+echo
+echo "Performing git status command"
+echo
+git status
+echo
+echo "Performing single commands that fail to execute"
+echo
+echi fail
+mkd 
+lsew
+none
+echo
+echo "Performing single commands that need at least one argument"
+echo
+git
+echo
+mkdir
+echo
+echo ********SINGLE COMMAND TEST ENDS NOW********
+exit

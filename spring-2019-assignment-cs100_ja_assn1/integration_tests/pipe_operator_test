@@ -1,0 +1,38 @@
+echo ************************************
+echo ******PIPE OPERATOR TEST********
+echo ************************************
+echo //note: every tested input will be followed by the result in the next line
+echo #note: the echo; at the start of every command is for output organization
+echo
+echo "****************************** TEST 1: cat PipeOpFile | tr A-Z a-z ******************************"
+echo; cat < PipeOpFile | tr A-Z a-z
+echo
+echo "****************************** TEST 2: echo lmao && cat < PipeOpFile | tr A-Z a-z ******************************"
+echo;TEST 2: echo lmao && cat < PipeOpFile | tr A-Z a-z 
+echo
+echo "****************************** TEST 3: ec lol || cat < PipeOpFile | tr A-Z a-z ******************************"
+echo;  ec lol || cat < PipeOpFile | tr A-Z a-z 
+echo
+echo "****************************** TEST 4: wc < PipeOpFile | cat >> PipeInFile ******************************"
+echo;  wc < PipeOpFile | cat > PipeInFile
+echo
+echo "****************************** TEST 5: echo 10; echo 20; cat < PipeInFile | tr A-Z a-z echo 30 && echo 40 || echo 50 || echo 60; echo 70 && echo 80 && echo 90 || echo 100 ******************************"
+echo;echo 10; echo 20; cat < PipeInFile | tr A-Z a-z echo 30 && echo 40 || echo 50 || echo 60; echo 70 && echo 80 && echo 90 || echo 100 
+echo
+echo *** varied command types tests***
+echo "****************************** TEST 6: git status && eco world || wc < PipeInFile | cat >> PipeOpFile ******************************"
+echo; git status && eco world || wc < PipeInFile | cat >> PipeOpFile
+echo
+echo "****************************** TEST 7: git status; cat < PipeInFile | tr A-Z a-z || cat > PipeInFile ******************************"
+echo git status; cat < PipeInFile | tr A-Z a-z || cat > PipeInFile
+echo
+echo "****************************** TEST 8: (echo lol && echo bye) || (cat < PipeInFile | wc < PipeOpFile) ******************************"
+echo; (echo lol && echo bye) || (cat < PipeInFile | wc < PipeOpFile)
+echo
+echo "****************************** TEST 9: (wc < PipeInFile && cat < PipeInFile) | tr A-Z a-z ******************************"
+echo; (wc < PipeInFile && cat < PipeInFile) | tr A-Z a-z 
+echo
+echo "****************************** TEST 10: (cat < PipeInFile && cat < PipeOpFile) | cat >> PipeOpFile ******************************"
+echo; (cat < PipeInFile && cat < PipeOpFile) | cat >> PipeOpFile
+echo;
+exit

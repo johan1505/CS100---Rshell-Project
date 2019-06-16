@@ -1,0 +1,36 @@
+echo ************************************
+echo ******TEST COMMANDS TEST********
+echo ************************************
+echo //note: every tested input will be followed by the result in the next line
+echo #note: the echo; at the start of every command is for output organization
+echo *test command focused tests***
+echo "****************************** TEST 1: test -e ../src/main.cpp && test -f ../integration_tests/multiple_commands_tests.sh******************************"
+echo; test -e ../src/main.cpp && test -f ../integration_tests/multiple_commands_tests.sh
+echo 
+echo "****************************** TEST 2: test -d ../src/ && test -e ../unit_tests/  && echo "Directories found"******************************"
+echo; test -d ../src/ && test -e ../unit_tests/  && echo "Directories found"
+echo
+echo "****************************** TEST 3: test -e noFile/; test -f ../src/Nofile; test -d noDic/noDic2******************************"
+echo; test -e noFile/; test -f ../src/Nofile; test -d noDic/noDic2
+echo
+echo "****************************** TEST 4: test -f ../unit_tests/unit_test.cpp && echo "unit_tests dir found"; test -e noDir/Garbabe || echo "Dir not found"******************************"
+echo; test -f ../unit_tests/unit_test.cpp && echo "unit_tests dir found"; test -e noDir/Garbabe || echo "Dir not found"
+echo 
+echo "****************************** TEST 5: test -d noDir; test -f ../header/Nohead.cpp || echo "File no found" && test -d ../echo/echo || echo "Dir no found"; test ../src/Command.cpp******************************"
+echo; test -d noDir; test -f ../header/Nohead.cpp || echo "File no found" && test -d ../echo/echo || echo "Dir no found"; test ../src/Command.cpp
+echo
+echo ***Test commands with parentheses***
+echo "****************************** TEST 6: (test -e ../src/main.cpp) && (test -f ../src/noFile.cpp || echo "File not found") ******************************"
+echo; (test -e ../src/main.cpp) && (test -f ../src/noFile.cpp || echo "File not found")
+echo 
+echo "****************************** TEST 7: (test -f ../src/And.cpp && test -d ../noDir/) || test -f ../unit_tests/noFile.cpp; (test ../src/Command.cpp && echo "File found")******************************"
+echo; (test -f ../src/And.cpp && test -d ../noDir/) || test -f ../unit_tests/noFile.cpp; (test ../src/Command.cpp && echo "File found")
+echo
+echo "****************************** TEST 8: (test noFile ||  (test -d ../src/main.cpp || echo "Dir not found"; (test -f ../src/ || echo "File not found"))) ******************************"
+echo; (test noFile ||  (test -d ../src/main.cpp || echo "Dir not found"; (test -f ../src/ || echo "File not found")))
+echo
+echo "****************************** TEST 9: (test -f ../header/Or.hpp && (test ../head/ || test -d ../unit_tests/ && (test ../header/Semicolon.hpp) && test -f ../header/noHead.cpp || (echo "End is reached")))******************************"
+echo
+echo; (test -f ../header/Or.hpp && (test ../head/ || test -d ../unit_tests/ && (test ../header/Semicolon.hpp) && test -f ../header/noHead.cpp || (echo "End is reached")))
+echo
+exit

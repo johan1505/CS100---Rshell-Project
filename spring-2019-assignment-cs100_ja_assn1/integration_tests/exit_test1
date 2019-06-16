@@ -1,0 +1,9 @@
+echo ************************************
+echo **********EXIT COMMAND TEST*********
+echo ************************************
+echo
+echo ********************* TEST1 *********************
+echo //testing a single exit input
+echo 
+echo "*****Test a: exit *****"
+exit

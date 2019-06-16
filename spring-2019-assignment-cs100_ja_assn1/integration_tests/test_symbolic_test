@@ -1,0 +1,36 @@
+echo ************************************
+echo *********TEST SYMBOLIC TEST*********
+echo ************************************
+echo //note: every tested input will be followed by the result in the next line
+echo #note: the echo; at the start of every command is for output organization
+echo "****************************** TEST 1: [ -e ../src/main.cpp ] && echo “path exists” ******************************"
+echo; [ -e ../src/main.cpp ] && echo “path exists”
+echo
+echo "****************************** TEST 2: [ -d ../src/main.cpp ] && echo “path exists” ******************************"
+echo; [ -d ../src/main.cpp ] && echo “path exists”
+echo
+echo "****************************** TEST 3: echo hi && [ -e ../src/main.cpp ] && echo “path exists” ******************************"
+echo; echo hi && [ -e ../src/main.cpp ] && echo “path exists”
+echo
+echo "****************************** TEST 4: echo hi || [ -e ../src/main.cpp ] && echo “path exists” ******************************"
+echo; echo hi || [ -e ../src/main.cpp ] && echo “path exists”
+echo
+echo "****************************** TEST 5: echo hi || ([ -e ../src/main.cpp ] && echo “path exists”) ******************************"
+echo; echo hi || ([ -e ../src/main.cpp ] && echo “path exists”)
+echo
+echo "****************************** TEST 6: [ -e ../src/ ] || ([ -e ../src/main.cpp ] && echo “path exists”) ******************************"
+echo; [ -e ../src/ ] || ([ -e ../src/main.cpp ] && echo “path exists”)
+echo
+echo "****************************** TEST 7: [ -e ../src/main.cpp ] && [ -d ../src/main.cpp ] && [ -f ../src/main.cpp ] ******************************"
+echo; [ -e ../src/main.cpp ] && [ -d ../src/main.cpp ] && [ -f ../src/main.cpp ]
+echo
+echo "****************************** TEST 8: [ -f ../header/And.hpp ] && echo hi || [ -e ../src/main.cpp ] && [ -d ../src/main.cpp ] && [ -f ../src/main.cpp ] ******************************"
+echo; [ -f ../header/And.hpp ] && echo hi || [ -e ../src/main.cpp ] && [ -d ../src/main.cpp ] && [ -f ../src/main.cpp ]
+echo
+echo "****************************** TEST 9: ((((((l -a; [ -f ../unit_tests/unit_test.cpp ] && git lmao)))))) ******************************"
+echo; ((((((l -a; [-f ../unit_tests/unit_test.cpp ] && git lmao))))))
+echo
+echo "****************************** TEST 10: (ech lil && git status) || (ls -a; echo what; git git; [ -d ../images ]) ******************************"
+echo; (ech lil && git status) || (ls -a; echo what; git git; [ -d ../images ])
+echo
+exit
